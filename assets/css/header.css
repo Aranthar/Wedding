@@ -1,0 +1,36 @@
+header {
+  height: 80px;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header ul li {
+  color: #000;
+}
+
+header ul li:not(:last-child) {
+  margin-right: 35px;
+  text-transform: capitalize;
+}
+
+header ul li:last-child {
+  text-transform: uppercase;
+}

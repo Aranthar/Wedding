@@ -1,0 +1,228 @@
+.section--intro
+  background-image: url('../img/intro/intro.jpg')
+  background-repeat: no-repeat
+
+  height: 100vh
+  width:  100vw
+
+  position: relative
+
+  .intro__info
+    width: 670px
+
+    position: absolute
+    bottom: 0
+    right: 136px
+
+    .info__top
+      display: flex
+      flex-direction: column
+
+      align-items: center
+
+      background-color: #fff
+
+      width: 100%
+
+      padding: 75px 0
+
+      .info__logo
+        margin-bottom: 25px
+
+      .info__title
+        color: #403f3f
+
+        font-family: $font--prata, serif
+        font-size: 25px
+        font-weight: 400
+
+        margin-bottom: 30px
+
+      .info__address
+        margin-top: 30px
+
+        font-family: $font--prata, serif
+        font-weight: 400
+
+        .address__name
+          font-size: 30px
+          font-weight: 400
+
+          text-transform: capitalize
+
+          text-align: center
+
+          color: #1d1d1d
+
+          margin-bottom: 20px
+
+        .address__position
+          font-size: 18px
+
+          color: #403f3f
+
+          text-align: center
+
+          width: 275px
+
+    .info__bottom
+      padding: 45px 0
+
+      background-color: $color--dark
+      color: #fff
+
+      position: relative
+
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      &::before
+        content: ''
+
+        display: block
+
+        width: 100%
+        height: 4px
+
+        background-color: #049885
+
+        position: absolute
+
+        top: 0
+        left: 0
+
+      .info__title--bottom
+        color: #fff
+
+        font-family: $font--prata, serif
+        font-size: 30px
+        font-weight: 400
+
+        margin-bottom: 30px
+
+        text-align: center
+
+      .info__time
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+
+        li
+          display: flex
+          flex-direction: column
+          align-items: center
+
+          &:not(:last-child)
+            margin-right: 60px
+
+          .number
+            font-family: $font--prata, serif
+            font-size: 40px
+            font-weight: 400
+
+          .string
+            text-transform: capitalize
+
+            font-family: $font--prata, serif
+            font-weight: 400
+            font-size: 18px
+  
+  .intro__arrows
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    position: absolute
+
+    bottom: 0
+    left: 138px
+
+    .arrow__up
+      padding: 30px 36px
+
+      background-color: $color--dark
+
+      border-top-left-radius: 30px
+
+      margin-right: 6px
+
+      cursor: pointer
+
+      transition: background-color .3s
+
+      &:hover
+        background-color: darken($color--dark, 10%)
+
+      &:active
+        background-color: darken($color--dark, 15%)
+        
+
+    .arrow__down
+      padding: 30px 36px
+
+      background-color: $color--light
+
+      border-top-right-radius: 30px
+
+      cursor: pointer
+
+      transition: background-color .3s
+
+      &:hover
+        background-color: darken($color--light, 10%)
+
+      &:active
+        background-color: darken($color--light, 15%)
+
+
+      img
+        transform: rotate(180deg)
+
+  .intro__side-panel
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    position: absolute
+
+    top: 50%
+    left: 0
+
+    transform: translateY(-50%)
+
+    background-color: $color--dark
+
+    width: 80px
+
+    border-radius: 0 50px 50px 0
+
+    padding: 40px 0
+
+    li
+      display: flex
+      align-items: center
+      justify-content: center
+
+      width: 58px
+      height: 58px
+
+      border-radius: 50%
+
+      color: #fff
+
+      transition: all .3s
+
+      a
+        display: flex
+        justify-content: center
+
+        font-size: 26px
+
+      &:hover
+        color: $color--dark
+        background-color: #fff
+
+      &:not(:last-child)
+        margin-bottom: 25px

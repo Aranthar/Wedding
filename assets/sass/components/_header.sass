@@ -1,0 +1,33 @@
+header
+  background-color: #fff
+
+  ul
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+
+    font-family: $font--prata, serif
+    font-size: 20px
+
+    li
+      padding: 26px 0
+
+      a
+        color: #000
+
+        word-spacing: 0
+
+        padding: 26px 24px
+
+        transition: all .3s
+
+        &:hover
+          color: #fff
+          background-color: $color--dark
+          
+      &:not(:last-child)
+        text-transform: capitalize
+
+      &:last-child
+        text-transform: uppercase
