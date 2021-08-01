@@ -25,6 +25,10 @@ a {
   color: inherit;
 }
 
+.section {
+  padding: 100px 0;
+}
+
 .container {
   max-width: 1170px;
   width: 100%;
@@ -93,12 +97,47 @@ header ul li:last-child {
   text-transform: uppercase;
 }
 
+.section__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 680px;
+  margin: 0 auto;
+  margin-bottom: 75px;
+}
+
+.section__header .title {
+  font-family: "Sail", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.section__header .subtitle {
+  font-family: "Prata", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #7a7a7a;
+  text-align: center;
+}
+
 .section--intro {
   background-image: url("../img/intro/intro.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   position: relative;
+  padding: 0;
 }
 
 .section--intro .intro__info {
@@ -363,6 +402,7 @@ header ul li:last-child {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   color: #fff;
+  cursor: pointer;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
@@ -387,4 +427,146 @@ header ul li:last-child {
 
 .section--intro .intro__side-panel li:not(:last-child) {
   margin-bottom: 25px;
+}
+
+.section--about {
+  position: relative;
+}
+
+.section--about .about__bg {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  z-index: -1;
+}
+
+.section--about .description {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section--about .description .about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 305px;
+  background-color: #f5fdff;
+}
+
+.section--about .description .about--reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.section--about .description .about__content {
+  -webkit-box-flex: 50%;
+  -webkit-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  padding: 0 40px 0 45px;
+}
+
+.section--about .description .about__content .about__name {
+  font-family: "Sail", cursive;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.section--about .description .about__content .about__name::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: #05a893;
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.section--about .description .about__content p {
+  font-family: "Prata", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.section--about .description .about__content .social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.section--about .description .about__content .social li {
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.section--about .description .about__content .social li:hover {
+  color: #05a893;
+}
+
+.section--about .description .about__content .social li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.section--about .description .about__img {
+  height: 100%;
+  overflow: hidden;
+  -webkit-box-flex: 50%;
+  -webkit-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.section--about .description .about__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
