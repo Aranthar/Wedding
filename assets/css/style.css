@@ -752,10 +752,11 @@ header ul li:last-child {
 }
 
 .section--story .histories .history__content .history__date {
+  display: block;
   font-family: "Prata", serif;
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
