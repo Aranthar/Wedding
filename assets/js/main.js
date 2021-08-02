@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  AOS.init();
   
   $('body').on('click', '[href*="#"]', event => {
     $('html,body').stop().animate({ 
@@ -7,5 +9,14 @@ $(document).ready(function () {
   
     event.preventDefault()
   })
+
+  AOS.init({
+
+    disable: 'phone',
+    offset: 120,
+    duration: 800,
+    once: false,
+
+  });
 
 });
