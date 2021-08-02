@@ -971,3 +971,64 @@ header ul li:last-child {
       grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
+
+.items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+
+.items .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 25px 40px 40px;
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(134, 134, 134, 0.23);
+          box-shadow: 0px 1px 6px 0px rgba(134, 134, 134, 0.23);
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  -o-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.items .item:hover {
+  background-color: #05a893;
+}
+
+.items .item:hover h1, .items .item:hover span {
+  color: #fff;
+}
+
+.items .item h1 {
+  font-family: "Prata", serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.items .item span {
+  font-family: "Prata", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #636363;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.items .item span:not(:last-child) {
+  margin-bottom: 5px;
+}
