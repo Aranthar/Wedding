@@ -1032,3 +1032,116 @@ header ul li:last-child {
 .items .item span:not(:last-child) {
   margin-bottom: 5px;
 }
+
+.section--blank {
+  background-color: #a3a3a3;
+  padding: 0;
+}
+
+.section--blank .contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 770px;
+  max-width: 940px;
+  width: 100%;
+  margin-left: auto;
+  background-color: #fff;
+  padding: 0 70px;
+  position: relative;
+}
+
+.section--blank .contact::after, .section--blank .contact::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 235px;
+  height: -webkit-calc(100% - (12px * 2));
+  height: calc(100% - (12px * 2));
+  background-repeat: no-repeat;
+}
+
+.section--blank .contact::after {
+  background-image: url("../img/flower_right.png");
+  right: -235px;
+}
+
+.section--blank .contact::before {
+  background-image: url("../img/flower_left.png");
+  left: -235px;
+}
+
+.section--blank .contact .section__header {
+  max-width: 510px;
+}
+
+.section--blank .contact .form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.section--blank .contact .form .ledger {
+  grid-column: auto / span 2;
+  resize: none;
+  margin-bottom: 0;
+}
+
+.section--blank .contact .form input {
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #959595;
+  font-family: "Prata", serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #878686;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.section--blank .contact .button {
+  display: block;
+  margin-left: auto;
+  width: 248px;
+  height: 64px;
+  background-color: #05a893;
+  color: #fff;
+  font-family: "Prata", serif;
+  font-size: 18px;
+  font-weight: 400;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-transition: background-color .3s;
+  -o-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.section--blank .contact .button:hover {
+  background-color: #047668;
+}
+
+.section--blank .contact .button:active {
+  background-color: #035e52;
+}

@@ -1,0 +1,112 @@
+.section--blank
+  background-color: #a3a3a3
+
+  padding: 0
+
+  .contact
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    height: 770px
+    max-width: 940px
+    width: 100%
+
+    margin-left: auto
+
+    background-color: #fff
+
+    padding: 0 70px
+
+    position: relative
+
+    &::after, &::before
+      content: ''
+
+      position: absolute
+
+      top: 50%
+
+      transform: translateY(-50%)
+
+      width: 235px
+      height: calc(100% - (12px * 2))
+
+      background-repeat: no-repeat
+      
+    &::after
+      background-image: url('../img/flower_right.png')
+      
+      right: -235px  
+      
+    &::before
+      background-image: url('../img/flower_left.png')
+
+      left: -235px     
+
+    .section__header
+      max-width: 510px
+
+    .form
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      gap: 30px
+
+      margin-bottom: 80px
+
+      .ledger
+        grid-column: auto / span 2
+
+        resize: none
+
+        margin-bottom: 0
+
+      input
+        height: 40px
+
+        border: none
+        outline: none
+
+        border-bottom: 2px solid #959595
+
+        font-family: $font--prata, serif
+        font-size: 20px
+        font-weight: 400
+
+        color: #878686
+
+        padding-right: 20px
+
+        margin-bottom: 30px
+
+    .button
+      display: block
+
+      margin-left: auto
+
+      width: 248px
+      height: 64px
+
+      background-color: $color--dark
+
+      color: #fff
+
+      font-family: $font--prata, serif
+      font-size: 18px
+      font-weight: 400
+
+      border: 0
+      outline: none
+
+      cursor: pointer
+
+      border-radius: 5px
+
+      transition: background-color .3s
+
+      &:hover
+        background-color: darken($color--dark, 10%)
+
+      &:active
+        background-color: darken($color--dark, 15%)
