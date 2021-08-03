@@ -1,0 +1,64 @@
+#menu
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  z-index: 200
+
+  background-color: $color--dark
+
+  color: #fff
+
+  display: none
+
+  opacity: 0
+
+  transition: opacity .3s
+
+  &.active
+    opacity: 1
+
+  .close
+    position: absolute
+
+    right: 20px
+    top: 20px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    color: #fff
+
+    width: 50px
+    height: 50px
+
+    font-size: 72px
+
+    cursor: pointer
+
+  ul
+    width: 100%
+
+    li
+      text-align: center
+
+      padding: 10px 20px
+
+      text-transform: capitalize
+
+      font-family: $font--prata, serif
+      font-size: 28px
+      font-weight: 400
+
+      @media screen and (max-width: $breakpoint--md)
+        font-size: 24px
+
+      &:last-child
+        text-transform: uppercase

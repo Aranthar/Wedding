@@ -1,6 +1,8 @@
 header
   background-color: #fff
 
+  padding: 0 20px
+
   ul
     display: flex
     flex-direction: row
@@ -9,6 +11,10 @@ header
 
     font-family: $font--prata, serif
     font-size: 20px
+    font-weight: 400
+
+    @media screen and (max-width: $breakpoint--lg)
+      display: none
 
     li
       padding: 26px 0
@@ -31,3 +37,20 @@ header
 
       &:last-child
         text-transform: uppercase
+
+  #menuTrigger
+    width: 50px
+    height: 50px
+
+    display: none
+    justify-content: center
+    align-items: center
+
+    font-size: 28px
+
+    cursor: pointer
+
+    @media screen and (max-width: $breakpoint--lg)
+      display: flex
+
+      margin-left: auto

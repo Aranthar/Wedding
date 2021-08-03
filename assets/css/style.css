@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+body.overflow-hidden {
+  overflow: hidden;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -51,6 +55,7 @@ p {
 
 header {
   background-color: #fff;
+  padding: 0 20px;
 }
 
 header ul {
@@ -73,6 +78,13 @@ header ul {
           justify-content: center;
   font-family: "Prata", serif;
   font-size: 20px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 992px) {
+  header ul {
+    display: none;
+  }
 }
 
 header ul li {
@@ -99,6 +111,32 @@ header ul li:not(:last-child) {
 
 header ul li:last-child {
   text-transform: uppercase;
+}
+
+header #menuTrigger {
+  width: 50px;
+  height: 50px;
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  header #menuTrigger {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .section__header {
@@ -245,6 +283,85 @@ header ul li:last-child {
 
 .image .image__overlay .image__content span::before {
   left: -35px;
+}
+
+#menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background-color: #05a893;
+  color: #fff;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+#menu.active {
+  opacity: 1;
+}
+
+#menu .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  font-size: 72px;
+  cursor: pointer;
+}
+
+#menu ul {
+  width: 100%;
+}
+
+#menu ul li {
+  text-align: center;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-family: "Prata", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  #menu ul li {
+    font-size: 24px;
+  }
+}
+
+#menu ul li:last-child {
+  text-transform: uppercase;
 }
 
 .section--intro {

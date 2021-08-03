@@ -53,4 +53,29 @@ $(document).ready(function () {
     $('#countdownSeconds').text(seconds)
   }
 
+  const menuOpen = () => {
+    $('body').addClass('overflow-hidden')
+
+    $('#menu').css("display", "flex")
+    setTimeout(() => {
+      $('#menu').addClass('active')
+    }, 1)
+  }
+
+  $('#menuTrigger').click(menuOpen)
+
+  const menuClose = () => {
+    $('body').removeClass('overflow-hidden')
+
+    $('#menu').removeClass('active')
+
+    setTimeout(() => {
+      $('#menu').css("display", "none")
+    }, 300)
+  }
+
+  $('#menu .close').click(menuClose)
+
+  $('#menu li a').click(menuClose)
+
 })
